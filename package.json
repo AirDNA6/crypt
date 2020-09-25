@@ -3,12 +3,39 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@react-google-maps/api": "^1.10.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.5.2",
+    "concurrently": "^5.3.0",
+    "cors": "^2.8.5",
+    "cyrillic-to-latin": "^2.0.0",
+    "emailjs-com": "^2.6.3",
+    "express": "^4.17.1",
+    "google-maps-react": "^2.0.6",
+    "mdbreact": "^4.27.0",
+    "minimap-react": "^1.1.2",
+    "nodemailer": "^6.4.11",
+    "nodemon": "^2.0.4",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.3.0",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
+    "react-google-map": "^3.1.1",
+    "react-google-maps": "^9.4.5",
+    "react-icons": "^3.11.0",
+    "react-minimap": "^0.7.4",
+    "react-responsive-animate-navbar": "^1.1.8",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.3",
+    "react-typical": "^0.1.3",
+    "styled-components": "^5.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -18,6 +45,18 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "b  wserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "browserslist": {
     "production": [
