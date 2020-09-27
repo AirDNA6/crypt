@@ -8,7 +8,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '100%',
+    width: '100%'
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
@@ -30,11 +30,7 @@ export default function Faq() {
   };
 
   return (
-    <div className={classes.root} className="container mt-5 mb-5"
-    //  style={{
-    //   backgroundColor: '#21d192'
-    // }}
-    >
+    <div className={classes.root} className="container mt-5 mb-5">
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={{
         backgroundColor: '#343A40',
         color: '#21d192'

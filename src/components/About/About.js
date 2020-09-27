@@ -32,7 +32,7 @@ class About extends Component {
         <Container>
           <Row className="aboutBack mb-5 mt-5">
 
-            <Col sm={12} xs={12} lg={8} className="mt-5">The Crypt was completely renovated in 2020 in accordance with the latest world standards. Reconstruction and adaptation of the old cinema space resulted in the first multiplex in Belgrade, with six superbly equipped halls, with a total capacity of almost 1,000 seats, as well as two catering facilities - Cinema and The End cafe.<br /> <br />
+            <Col sm={12} xs={12} lg={8} className="mt-5 aboutFont">The Crypt was completely renovated in 2020 in accordance with the latest world standards. Reconstruction and adaptation of the old cinema space resulted in the first multiplex in Belgrade, with six superbly equipped halls, with a total capacity of almost 1,000 seats, as well as two catering facilities - Cinema and The End cafe.<br /> <br />
             In addition to the regular film repertoire, the Crypt hosts ceremonial premieres of domestic films, as well as the FEST, Cinema City, Cinemania and Kids Fest festivals. An important segment of our offer is the possibility of purchasing concessions (popcorn, nachos and various soft drinks) that the audience can consume during the screening.
             </Col>
             <Col sm={12} xs={12} lg={4} className="mt-5">
@@ -60,7 +60,7 @@ class About extends Component {
               <img src="../images/projekcija1.jpg" className="img-fluid" alt="projekcija1"/>
             </Col>
 
-            <Col sm={12} xs={12} lg={8} className="mt-5">The cinema is located near high-frequency parts of the city, such as Slavija, Stadion Rajko Mitic and Vojvode Stepe Street. Crypt is located near numerous lines of public and suburban transport, which allows citizens of Novi Sad and the surrounding area to quickly and cheaply come to the cinema. In front of the cinema and in its surroundings there are public parking areas, and in the immediate vicinity there are several organized parking lots, which facilitates the arrival of visitors who choose their own transport.
+            <Col sm={12} xs={12} lg={8} className="mt-5 aboutFont">The cinema is located near high-frequency parts of the city, such as Slavija, Stadion Rajko Mitic and Vojvode Stepe Street. Crypt is located near numerous lines of public and suburban transport, which allows citizens of Novi Sad and the surrounding area to quickly and cheaply come to the cinema. In front of the cinema and in its surroundings there are public parking areas, and in the immediate vicinity there are several organized parking lots, which facilitates the arrival of visitors who choose their own transport.
             </Col>
 
           </Row>
@@ -70,154 +70,6 @@ class About extends Component {
             <Col sm>sm=true</Col>
           </Row> */}
         </Container>
-
-
-
-
-        <Container className="aboutBack">
-
-          <Row className="aboutBack">
-            <h1 className="mx-auto">Hall 1</h1>
-          </Row>
-
-
-          <Row className="aboutBack mb-5 mt-5 ">
-            <Col sm={12} xs={12} md={12} lg={6} className="center">
-              <img src="../images/sala1.jpg" alt="sala1" className="img-fluid mb-5" style={{
-               width: '100%',
-              }}
-              />
-            </Col>
-
-            <Col sm={12} xs={12} md={12} lg={6} >
-              <img src="../images/planSala1.png" alt="planSala1" className="img-fluid mb-5" style={{
-                width: '100%',
-              }}/>
-            </Col>
-          </Row>
-        </Container>
-
-
-        <Container className="aboutBack">
-
-<Row className="aboutBack">
-  <h1 className="mx-auto">Hall 2</h1>
-</Row>
-
-
-<Row className="aboutBack mb-5 mt-5 ">
-  <Col sm={12} xs={12} md={12} lg={6} className="center">
-    <img src="../images/sala2.jpg" alt="sala2" className="img-fluid mb-5" style={{
-     width: '100%',
-    }}
-    />
-  </Col>
-
-  <Col sm={12} xs={12} md={12} lg={6} >
-    <img src="../images/planSala2.png" alt="planSala2" className="img-fluid mb-5" style={{
-      width: '100%',
-    }}/>
-  </Col>
-</Row>
-</Container>
-
-
-<Container className="aboutBack">
-
-<Row className="aboutBack">
-  <h1 className="mx-auto">Hall 3</h1>
-</Row>
-
-
-<Row className="aboutBack mb-5 mt-5 ">
-  <Col sm={12} xs={12} md={12} lg={6} className="center">
-    <img src="../images/sala3.jpg" alt="sala3" className="img-fluid mb-5" style={{
-     width: '100%',
-    }}
-    />
-  </Col>
-
-  <Col sm={12} xs={12} md={12} lg={6} >
-    <img src="../images/planSala3.png" alt="planSala3" className="img-fluid mb-5" style={{
-      width: '100%',
-      height: '89%',
-    }}/>
-  </Col>
-</Row>
-</Container>
-
-
-<Container className="aboutBack">
-
-<Row className="aboutBack">
-  <h1 className="mx-auto">Hall 4</h1>
-</Row>
-
-
-<Row className="aboutBack mb-5 mt-5 ">
-  <Col sm={12} xs={12} md={12} lg={6} className="center">
-    <img src="../images/sala4.jpg" alt="sala4"className="img-fluid mb-5" style={{
-     width: '100%',
-    }}
-    />
-  </Col>
-
-  <Col sm={12} xs={12} md={12} lg={6} >
-    <img src="../images/planSala4.png" alt="planSala4"className="img-fluid mb-5" style={{
-      width: '100%',
-    }}/>
-  </Col>
-</Row>
-</Container>
-
-
-<Container className="aboutBack">
-
-<Row className="aboutBack">
-  <h1 className="mx-auto">Hall 5</h1>
-</Row>
-
-
-<Row className="aboutBack mb-5 mt-5 ">
-  <Col sm={12} xs={12} md={12} lg={6} className="center">
-    <img src="../images/sala5.jpg" alt="sala5" className="img-fluid mb-5" style={{
-     width: '100%',
-    }}
-    />
-  </Col>
-
-  <Col sm={12} xs={12} md={12} lg={6} >
-    <img src="../images/planSala5.png"  alt="planSala5" className="img-fluid mb-5" style={{
-      width: '100%',
-    }}/>
-  </Col>
-</Row>
-</Container>
-
-
-<Container className="aboutBack">
-
-<Row className="aboutBack">
-  <h1 className="mx-auto">Hall 6</h1>
-</Row>
-
-
-<Row className="aboutBack mb-5 mt-5 ">
-  <Col sm={12} xs={12} md={12} lg={6} className="center">
-    <img src="../images/sala6.jpg" alt="sala6"className="img-fluid mb-5" style={{
-     width: '100%',
-    }}
-    />
-  </Col>
-
-  <Col sm={12} xs={12} md={12} lg={6} >
-    <img src="../images/planSala6.png" alt="planSala6"className="img-fluid mb-5" style={{
-      width: '100%',
-      height: '89%'
-    }}/>
-  </Col>
-</Row>
-</Container>
 
       </div>
 

@@ -1,0 +1,7 @@
+.aboutBack{
+  /* background-color: #343A40 !important; */
+  background: rgba(52, 58, 64);
+  color: #21d192 !important;
+  font-family: 'Quantico', sans-serif;
+  border-radius: 10px;
+}

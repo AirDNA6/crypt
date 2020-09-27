@@ -4,6 +4,7 @@ import Header from '../elements/Header/Header'
 import Footer from '../elements/Footer/Footer'
 import Home from '../Home/Home'
 import About from '../About/About'
+import Halls from '../Halls/HallInfo'
 import Contact from '../Contact/Contact'
 import Movie from '../Movie/Movie'
 import NotFound from '../elements/NotFound/NotFound'
@@ -31,6 +32,7 @@ const App = () => {
       <Scroll showBelow={250} />
         <Switch>
           <Route path="/" component={Home} exact />
+          <Route path="/halls" component={Halls} exact />
           <Route path="/about" component={About} exact />
           <Route path="/contact" component={Contact} exact />
           <Route path="/faq" component={Faq} exact />
