@@ -9,6 +9,7 @@ import Movie from '../Movie/Movie'
 import NotFound from '../elements/NotFound/NotFound'
 import ScrollToTop from '../ScrollToTop'
 import Scroll from '../Scroll'
+import Faq from '../Faq'
 
 
 
@@ -32,7 +33,9 @@ const App = () => {
           <Route path="/" component={Home} exact />
           <Route path="/about" component={About} exact />
           <Route path="/contact" component={Contact} exact />
+          <Route path="/faq" component={Faq} exact />
           <Route path="/:movieId"  component={Movie} exact />
+
           <Route component={NotFound} />
         </Switch>
         <Footer />
