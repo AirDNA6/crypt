@@ -1,0 +1,41 @@
+
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.main-footer {
+  color: white;
+  background-color:#1C1C1C;
+  padding: 1rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.fontQuantico{
+  color: rgb(0, 0, 0) !important;
+  font-family: 'Quantico', sans-serif;
+}
+
+.fontQuanticoHeader{
+  color: 'black' !important;
+  font-family: 'Quantico', sans-serif;
+}
+
+.futer{
+  background-color: #343A40 !important;
+  color: #21d192 !important;
+  font-family: 'Quantico', sans-serif;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+  .kolonaMapa {
+    display: none;
+  }
+}
