@@ -112,7 +112,7 @@ class Footer extends Component {
 
 
       // </div>
-      <MDBFooter  className="page-footer font-small lighten-5 pt-0" className="futer">
+      <MDBFooter  className="page-footer font-small lighten-5 pt-0 futer">
       <div style={{ backgroundColor: "#21d192", color: "#343A40"}}>
       
         <MDBContainer >

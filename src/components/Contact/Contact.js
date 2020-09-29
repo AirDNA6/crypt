@@ -1,6 +1,6 @@
 import emailjs from 'emailjs-com';
 import React, { Component} from "react";
-import { MDBRow, MDBCol, MDBInput, MDBBtn, MDBIcon } from "mdbreact";
+import { MDBRow, MDBCol, MDBInput, MDBBtn} from "mdbreact";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';

@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom'
-
 import { API_URL, API_KEY, IMAGE_BASE_URL, POSTER_SIZE, BACKDROP_SIZE } from '../../config'
 
 import HeroImage from '../elements/HeroImage/HeroImage'
