@@ -11,7 +11,7 @@ class About extends Component {
   render() {
     return (
       <div>
-        <Container fluid className="aboutBack mb-5 mt-5">
+        <Container className="aboutBack mb-5 mt-5">
           <Row className="aboutBack">
             <h1 className="mx-auto">Hall 1</h1>
           </Row>
@@ -35,7 +35,7 @@ class About extends Component {
           </Row>
         </Container>
 
-        <Container fluid className="aboutBack mt-5">
+        <Container className="aboutBack mt-5">
           <Row className="aboutBack">
             <h1 className="mx-auto">Hall 2</h1>
           </Row>
@@ -59,7 +59,7 @@ class About extends Component {
           </Row>
         </Container>
 
-        <Container fluid className="aboutBack mt-5">
+        <Container className="aboutBack mt-5">
           <Row className="aboutBack">
             <h1 className="mx-auto">Hall 3</h1>
           </Row>
@@ -83,7 +83,7 @@ class About extends Component {
           </Row>
         </Container>
 
-        <Container fluid className="aboutBack mt-5">
+        <Container className="aboutBack mt-5">
           <Row className="aboutBack">
             <h1 className="mx-auto">Hall 4</h1>
           </Row>
@@ -106,7 +106,7 @@ class About extends Component {
           </Row>
         </Container>
 
-        <Container fluid className="aboutBack mt-5">
+        <Container className="aboutBack mt-5">
           <Row className="aboutBack">
             <h1 className="mx-auto">Hall 5</h1>
           </Row>
@@ -130,7 +130,7 @@ class About extends Component {
           </Row>
         </Container>
 
-        <Container fluid className="aboutBack mt-5">
+        <Container className="aboutBack mt-5">
           <Row className="aboutBack">
             <h1 className="mx-auto">Hall 6</h1>
           </Row>
