@@ -33,7 +33,11 @@ const Header = () => {
     <Link to="/" className="navLink">HOME</Link>
     <Link to="halls" className="navLink">HALL INFO</Link>
     <Link to="about" className="navLink">ABOUT</Link>
+<<<<<<< HEAD
       <Link to="contact" className="navLink">CONTACT US</Link>
+=======
+      <Link to="contact" className="navLink">CONTACT</Link>
+>>>>>>> d058085e81dc8298a817ccdc7dfa0ad2b4e4eebb
       <Link to="faq" className="navLink">FAQ</Link>
 
     
