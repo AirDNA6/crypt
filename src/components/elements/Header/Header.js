@@ -30,33 +30,26 @@ const Header = () => {
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse pse id="responsive-navbar-nav">
     <Nav className="mr-auto">
-    <Link to="/" className="navLink">HOME</Link>
-    <Link to="halls" className="navLink">HALL INFO</Link>
-    <Link to="about" className="navLink">ABOUT</Link>
-      <Link to="contact" className="navLink">CONTACT US</Link>
-      <Link to="faq" className="navLink">FAQ</Link>
+    <Link to="/" className="navLink mt-2">HOME</Link>
+    <Link to="halls" className="navLink mt-2">HALL INFO</Link>
+    <Link to="about" className="navLink mt-2">ABOUT</Link>
+      <Link to="contact" className="navLink mt-2">CONTACT US</Link>
+      <Link to="faq" className="navLink mt-2">FAQ</Link>
 
-    
+      <NavDropdown title="HALLS" id="basic-nav-dropdown" className="navLink">
+
+        <NavDropdown.Item>
+        <Link to="about">ABOUT</Link>
+        </NavDropdown.Item>
+
+        <NavDropdown.Item href="#action/3.3">
+        <Link to="contact">CONTACT US</Link>
+        </NavDropdown.Item>
+
+        <NavDropdown.Divider />
+        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+      </NavDropdown>      
     </Nav>
-    
-
-    {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown" className="navLink">
-        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-        <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-      </NavDropdown> */}
-
-    {/* <Nav className="navLink">
-    <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-        <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-      </NavDropdown>
-    </Nav> */}
 
     <Nav>
       <a target="_blank" href="http://www.themoviedb.org"><img src="./images/tmdb.png" alt="tmdb-logo" className="rmdb-tmdb-logo"></img></a>
