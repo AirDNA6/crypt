@@ -1,3 +1,7 @@
+*{
+  font-family: 'Quantico', sans-serif;
+}
+
 .rmdb-heroimage {
   background-size: 100%, cover !important;
   background-position: center, center !important;
@@ -34,13 +38,13 @@
 }
 
 .rmdb-heroimage-text h1 {
-  font-family: 'Abel', sans-serif;
+
   font-size:48px;
   color: #fff;
 }
 
 .rmdb-heroimage-text p {
-  font-family: 'Abel', sans-serif;
+
   font-size: 22px;
   line-height: 26px;
   color: #fff;
