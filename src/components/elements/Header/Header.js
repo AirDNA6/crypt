@@ -39,12 +39,12 @@ const Header = () => {
       <NavDropdown title="HALLS" id="basic-nav-dropdown" className="navLink">
 
         <NavDropdown.Item>
-        <Link to="about">ABOUT</Link>
+        <Link to="hala">HALL 1</Link>
         </NavDropdown.Item>
 
-        <NavDropdown.Item href="#action/3.3">
-        <Link to="contact">CONTACT US</Link>
-        </NavDropdown.Item>
+        {/* <NavDropdown.Item href="#action/3.3">
+        <Link to="contact">Hall 2</Link>
+        </NavDropdown.Item> */}
 
         <NavDropdown.Divider />
         <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>

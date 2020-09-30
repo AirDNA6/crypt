@@ -9,9 +9,9 @@ import LoadMoreBtn from '../elements/LoadMoreBtn/LoadMoreBtn'
 import Spinner from '../elements/Spinner/Spinner'
 
 
-import './Home.css'
+import './Hala.css'
 
-class Home extends Component {
+class Hala extends Component {
   state = {
     movies: [],
     heroImage: null,
@@ -27,48 +27,54 @@ class Home extends Component {
     this.setState({
       loading: true
     })
-    const endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`
+    //https://api.themoviedb.org/3/genre/movie/list?api_key=844dba0bfd8f3a4f3799f6130ef9e335&language=en-US
+
+    // const endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`
+    //
+    //https://api.themoviedb.org/3/discover/movie?api_key=844dba0bfd8f3a4f3799f6130ef9e335&language=en-US&with_genres=28
+    //`${API_URL}discover/movie?api_key=${API_KEY}&language=en-US&with_genres=16`
+    const endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US?_limit=5&with_genres=10751`
     this.fetchItems(endpoint)
   }
 
 
-  searchItems = (searchTerm) => {
-    console.log(searchTerm);
-    let endpoint = ''
-    this.setState({
-      movies: [],
-      loading: true,
-      searchTerm
-    })
+//   searchItems = (searchTerm) => {
+//     console.log(searchTerm);
+//     let endpoint = ''
+//     this.setState({
+//       movies: [],
+//       loading: true,
+//       searchTerm
+//     })
 
-    if (searchTerm === '') {
-      endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`
-    } else {
+//     if (searchTerm === '') {
+//       endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&page=2`
+//     } else {
 
-      endpoint = ` ${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${searchTerm}
-    `
+//       endpoint = ` ${API_URL}search/now_playing?api_key=${API_KEY}&language=en-US&query=${searchTerm}
+//     `
     
-    }
+//     }
 
-    this.fetchItems(endpoint)
+//     this.fetchItems(endpoint)
 
-  }
+//   }
 
-  loadMoreItems = () => {
-    let endpoint = ''
-    this.setState({
-      loading: true
-    })
+//   loadMoreItems = () => {
+//     let endpoint = ''
+//     this.setState({
+//       loading: true
+//     })
 
-    if (this.state.searchTerm === '') {
-      endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=${this.state.currentPage + 1}`
-    } else {
-      endpoint = `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${this.state.searchTerm}&page=${this.state.currentPage + 1}`
-    }
+//     if (this.state.searchTerm === '') {
+//       endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&page=${this.state.currentPage + 1}`
+//     } else {
+//       endpoint = `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${this.state.searchTerm}&page=${this.state.currentPage + 1}`
+//     }
 
-    this.fetchItems(endpoint)
+//     this.fetchItems(endpoint)
 
-  }
+//   }
 
   fetchItems = (endpoint) => {
     fetch(endpoint)
@@ -85,8 +91,6 @@ class Home extends Component {
     })
     .catch(error => console.error('Error:', error))
   }
-
-
 
   render() {
     return (
@@ -125,4 +129,4 @@ class Home extends Component {
 
 }
 
-export default Home
+export default Hala
