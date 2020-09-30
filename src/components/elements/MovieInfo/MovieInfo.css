@@ -40,7 +40,7 @@
 }
 
 .rmdb-movieinfo-text {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Quantico', sans-serif;
   /* height: 100%; */
   /* width: auto; */
   padding: 40px;
@@ -52,7 +52,7 @@
 }
 
 .rmdb-movieinfo-text h1 {
-  font-family: 'Abel', sans-serif;
+  font-family: 'Quantico', sans-serif;
   font-size:48px;
   margin: 0;
 }
@@ -73,7 +73,7 @@
 }
 
 .rmdb-movieinfo-text p {
-  font-family: 'Abel', sans-serif;
+  font-family: 'Quantico', sans-serif;
   font-size: 18px;
   line-height: 26px;
 }

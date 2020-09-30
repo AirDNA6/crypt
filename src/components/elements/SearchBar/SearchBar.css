@@ -26,8 +26,12 @@
   color: #fff;
 }
 
+*{
+  font-family: 'Quantico', sans-serif;
+}
+
 .rmdb-searchbar-input {
-  font-family: 'Abel', sans-serif;
+
   font-size: 38px;
   position: absolute;
   left: 70px;

@@ -5,6 +5,7 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import './Faq.css'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -15,10 +16,12 @@ const useStyles = makeStyles((theme) => ({
     fontSize: theme.typography.pxToRem(15),
     flexBasis: '100%',
     flexShrink: 0,
+    fontFamily: 'Quantico'
   },
   secondaryHeading: {
     fontSize: theme.typography.pxToRem(15),
     color: theme.palette.text.secondary,
+    fontFamily: 'Quantico'
   },
 }));
 
@@ -41,12 +44,12 @@ export default function Faq() {
           aria-controls="panel1bh-content"
           id="panel1bh-header">
           <Typography className={classes.heading}>
-            Where can I get my Crypt bonus card?
+           Where can I get my Crypt bonus card?
 </Typography>
           {/* <Typography className={classes.secondaryHeading}>I am an accordion</Typography> */}
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+        <Typography style={{fontFamily: 'Quantico'}}>
           Register for free on our website (until registration). The code you receive via e-mail you need to show at the box office, on the basis of which the employee issues you a Cineplexx bonus card. <br/><br />
 
 Already have an online account on our site? In that case, there is no need to re-register. All you have to do is pick up your Cineplexx bonus card based on your date of birth and e-mail address the next time you visit the box office. 
@@ -68,7 +71,7 @@ Already have an online account on our site? In that case, there is no need to re
           </Typography> */}
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+          <Typography style={{fontFamily: 'Quantico'}}>
           You can exchange your points at the box office for free tickets or items from the food and beverage counter. 
           </Typography>
         </AccordionDetails>
@@ -89,7 +92,7 @@ Already have an online account on our site? In that case, there is no need to re
           </Typography> */}
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+        <Typography style={{fontFamily: 'Quantico'}}>
           You can check the status of your bonus points online at any time . You need to select your name in the upper right corner and check the "Crypt bonus card" option to see the status of the collected points. 
           </Typography>
         </AccordionDetails>
@@ -107,7 +110,7 @@ Already have an online account on our site? In that case, there is no need to re
           <Typography className={classes.heading}>What is the validity period of funds and points on my Crypt bonus card?</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+        <Typography style={{fontFamily: 'Quantico'}}>
           The amount paid on the Crypt bonus card is valid for 18 months from the date of payment. After 18 months, the discounts associated with the Cineplexx bonus card are no longer valid. The remaining amount cannot be returned to the cardholder, but can be used as a non-cash means of ticket payment (without discount) for the next 60 months. After the expiration of those 5 years, the funds on the card cease to be valid. <br/><br/>
           Bonus points that you collect on the Crypt bonus card can be redeemed for a period of 18 months from the day they were collected. After 18 months, the points are deleted, however, points that are not older than 18 months remain on the card and can be used until they expire.<br/><br/>
           Funds on the card (money and points) cannot be redeemed, nor can they be transferred to another user's Cineplexx bonus card. 
@@ -131,7 +134,7 @@ Already have an online account on our site? In that case, there is no need to re
           </Typography> */}
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+        <Typography style={{fontFamily: 'Quantico'}}>
           Yes, we take credit and debit cards online, at the box office and in the Crypt Club.
           </Typography>
         </AccordionDetails>
@@ -153,7 +156,7 @@ Already have an online account on our site? In that case, there is no need to re
           </Typography> */}
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+        <Typography style={{fontFamily: 'Quantico'}}>
           We kindly ask that you refrain from bringing outside food and drink into the cinema. We have an extensive food and drinks menu for you to choose from.
           </Typography>
         </AccordionDetails>
@@ -174,7 +177,7 @@ Already have an online account on our site? In that case, there is no need to re
           </Typography> */}
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+        <Typography style={{fontFamily: 'Quantico'}}>
           Our call centre is now back open, so you can call us on + 65 1327 172 or get in contact via email on customer.services@crypt.com
           </Typography>
         </AccordionDetails>
@@ -195,7 +198,7 @@ Already have an online account on our site? In that case, there is no need to re
           </Typography> */}
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+        <Typography style={{fontFamily: 'Quantico'}}>
           Marvel night is the event dedicated to the release of superhero, action movies and movies realized by the comics of Marvel studio, when visitors can get double pains with a bonus card and various gifts.
           </Typography>
         </AccordionDetails>
@@ -216,7 +219,7 @@ Already have an online account on our site? In that case, there is no need to re
           </Typography> */}
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+        <Typography style={{fontFamily: 'Quantico'}}>
           DC night is the event dedicated to the release of superhero, action movies and movies realized by the comics of DC studio, when visitors can get double pains with a bonus card and various gifts.
           </Typography>
         </AccordionDetails>
@@ -238,7 +241,7 @@ Already have an online account on our site? In that case, there is no need to re
           </Typography> */}
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+        <Typography style={{fontFamily: 'Quantico'}}>
           Please inform us about the loss or damage of the card by e-mail at bonuscard@crypt.com . You need to send us your Crypt bonus card number, which is why we advise you to keep that number separate from the card itself. After losing the Crypt bonus card, the owner will receive a new card after the given number of the lost card and the identification document. Funds and bonus points will be transferred from the old to the new Crypt bonus card, with the amount reduced by manipulative costs in the amount of 250 dinars. The new Crypt bonus card will be valid for the same period as the lost card. 
           </Typography>
         </AccordionDetails>
