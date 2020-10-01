@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { API_URL, API_KEY, IMAGE_BASE_URL, POSTER_SIZE, BACKDROP_SIZE } from '../../config'
 
 import HeroImage from '../elements/HeroImage/HeroImage'
-import SearchBar from '../elements/SearchBar/SearchBar'
+
 import FourColGrid from '../elements/FourColGrid/FourColGrid'
 import MovieThumb from '../elements/MovieThumb/MovieThumb'
-import LoadMoreBtn from '../elements/LoadMoreBtn/LoadMoreBtn'
-import Spinner from '../elements/Spinner/Spinner'
+import HallOneColGrid from './HallOneColGrid'
+
 
 
 import './Hala.css'
@@ -18,8 +18,9 @@ class Hala extends Component {
     loading: false,
     currentPage: 0,
     totalPages: 0,
-    searchTerm: '',
-    totalResults: 0
+
+    totalResults: 0,
+    vote_count: 0
   }
 
 
@@ -33,48 +34,26 @@ class Hala extends Component {
     //
     //https://api.themoviedb.org/3/discover/movie?api_key=844dba0bfd8f3a4f3799f6130ef9e335&language=en-US&with_genres=28
     //`${API_URL}discover/movie?api_key=${API_KEY}&language=en-US&with_genres=16`
-    const endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US?_limit=5&with_genres=10751`
+    const endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&with_genres=10751&page=1`
     this.fetchItems(endpoint)
   }
 
+  //   loadMoreItems = () => {
+  //   let endpoint = ''
+  //   this.setState({
+  //     loading: true
+  //   })
 
-//   searchItems = (searchTerm) => {
-//     console.log(searchTerm);
-//     let endpoint = ''
-//     this.setState({
-//       movies: [],
-//       loading: true,
-//       searchTerm
-//     })
+  //   if (this.state.searchTerm === '') {
+  //     endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&page=${this.state.currentPage + 1}`
+  //   } else {
+  //     endpoint = `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${this.state.searchTerm}&page=${this.state.currentPage + 1}`
+  //   }
 
-//     if (searchTerm === '') {
-//       endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&page=2`
-//     } else {
+  //   this.fetchItems(endpoint)
 
-//       endpoint = ` ${API_URL}search/now_playing?api_key=${API_KEY}&language=en-US&query=${searchTerm}
-//     `
-    
-//     }
+  // }
 
-//     this.fetchItems(endpoint)
-
-//   }
-
-//   loadMoreItems = () => {
-//     let endpoint = ''
-//     this.setState({
-//       loading: true
-//     })
-
-//     if (this.state.searchTerm === '') {
-//       endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&page=${this.state.currentPage + 1}`
-//     } else {
-//       endpoint = `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${this.state.searchTerm}&page=${this.state.currentPage + 1}`
-//     }
-
-//     this.fetchItems(endpoint)
-
-//   }
 
   fetchItems = (endpoint) => {
     fetch(endpoint)
@@ -86,7 +65,8 @@ class Hala extends Component {
         loading: false,
         currentPage: result.page,
         totalPages: result.total_pages,
-        totalResults: result.total_results
+        totalResults: result.total_results,
+        vote_count: result.vote_count
       })
     })
     .catch(error => console.error('Error:', error))
@@ -101,12 +81,13 @@ class Hala extends Component {
               image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${this.state.heroImage.backdrop_path}`}
               title={this.state.heroImage.original_title}
               text={this.state.heroImage.overview} />
-            <SearchBar callback={this.searchItems} />
           </div> : null}
         <div className="rmdb-home-grid">
-        <FourColGrid
-            header={this.state.searchTerm ? `Search Result: ${this.state.totalResults}` : `Popular Movies: ${this.state.totalResults}`}
+        <HallOneColGrid
+        //: ${this.state.totalResults}
+
             loading={this.state.loading}
+            vote_count={this.state.vote_count}
             >
             {this.state.movies.map ( (element, i) => {
               return <MovieThumb
@@ -115,11 +96,10 @@ class Hala extends Component {
                         image={element.poster_path ? `${IMAGE_BASE_URL}${POSTER_SIZE}${element.poster_path}` : './images/no_image.png'}
                         movieId={element.id}
                         movieName={element.original_title}
+                       
                      />
             })}
-          </FourColGrid>
-          {this.state.loading ? <Spinner /> : null}
-          {(this.state.currentPage <= this.state.totalPages && !this.state.loading) ? <LoadMoreBtn text="Load More" onClick={this.loadMoreItems}/> : null }
+          </HallOneColGrid>
         </div>
 
 

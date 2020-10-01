@@ -11,7 +11,7 @@ import NotFound from '../elements/NotFound/NotFound'
 import ScrollToTop from '../ScrollToTop'
 import Scroll from '../Scroll'
 import Faq from '../Faq'
-import Hala from '../Hala/Hala'
+import Hala from '../HallOne/HallOne'
 
 
 
