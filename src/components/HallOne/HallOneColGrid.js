@@ -6,7 +6,7 @@ const HallOneColGrid = (props) => {
   const renderElements = () => {
     const gridElements = props.children.map((element, i) =>{
       return(
-      <div key={i} className="rmdb-grid-element">
+      <div key={i} className="backGround">
 
         {element}
       </div>
@@ -19,11 +19,12 @@ const HallOneColGrid = (props) => {
 
 
   return (
-    <div className="rmdb-grid">
-     <h1>Family</h1>
-      <div className="rmdb-grid-content">
+    <div>
+       {props.header && !props.loading ? <h1>{props.header}</h1> : null}
+      <div >
         
         {renderElements()}
+        
       </div>
     </div>
   )

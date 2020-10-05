@@ -4,9 +4,12 @@ import { API_URL, API_KEY, IMAGE_BASE_URL, POSTER_SIZE, BACKDROP_SIZE } from '..
 import HeroImage from '../elements/HeroImage/HeroImage'
 
 import FourColGrid from '../elements/FourColGrid/FourColGrid'
-import MovieThumb from '../elements/MovieThumb/MovieThumb'
+import HallOneMovieThumb from './HallOneMovieThumb'
 import HallOneColGrid from './HallOneColGrid'
 
+import {Container, Row, Col} from 'react-bootstrap'
+import 'bootstrap-css-only/css/bootstrap.min.css';
+import 'mdbreact/dist/css/mdb.css';
 
 
 import './Hala.css'
@@ -20,7 +23,7 @@ class Hala extends Component {
     totalPages: 0,
 
     totalResults: 0,
-    vote_count: 0
+  //  vote_count: 0
   }
 
 
@@ -66,7 +69,7 @@ class Hala extends Component {
         currentPage: result.page,
         totalPages: result.total_pages,
         totalResults: result.total_results,
-        vote_count: result.vote_count
+       // vote_count: result.vote_count
       })
     })
     .catch(error => console.error('Error:', error))
@@ -74,33 +77,40 @@ class Hala extends Component {
 
   render() {
     return (
-      <div className="rmdb-home">
+      <div >
         {this.state.heroImage ?
           <div>
             <HeroImage
               image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${this.state.heroImage.backdrop_path}`}
               title={this.state.heroImage.original_title}
-              text={this.state.heroImage.overview} />
+              text={this.state.heroImage.overview}
+               />
           </div> : null}
-        <div className="rmdb-home-grid">
+        <Container className="mt-5 mb-5">
+          <Row>
+            <Col sm={12}>
         <HallOneColGrid
         //: ${this.state.totalResults}
-
+        header={`Family Movies`}
             loading={this.state.loading}
-            vote_count={this.state.vote_count}
+        //    vote_count={this.state.vote_count}
             >
             {this.state.movies.map ( (element, i) => {
-              return <MovieThumb
+              return <HallOneMovieThumb
                         key={i}
                         clickable={true}
                         image={element.poster_path ? `${IMAGE_BASE_URL}${POSTER_SIZE}${element.poster_path}` : './images/no_image.png'}
                         movieId={element.id}
                         movieName={element.original_title}
-                       
+                       vote_count={element.vote_count}
+                       overview={element.overview}
+                       date={element.release_date}
                      />
             })}
           </HallOneColGrid>
-        </div>
+          </Col>
+          </Row>
+        </Container>
 
 
       </div>
