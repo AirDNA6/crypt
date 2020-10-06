@@ -11,7 +11,8 @@ import NotFound from '../elements/NotFound/NotFound'
 import ScrollToTop from '../ScrollToTop'
 import Scroll from '../Scroll'
 import Faq from '../Faq'
-import Hala from '../HallOne/HallOne'
+import HallOne from '../HallOne/HallOne'
+import HallTwo from '../HallTwo/HallTwo'
 
 
 
@@ -32,7 +33,8 @@ const App = () => {
           <Route path="/about" component={About} exact />
           <Route path="/contact" component={Contact} exact />
           <Route path="/faq" component={Faq} exact />
-          <Route path="/hala" component={Hala} exact />
+          <Route path="/hallone" component={HallOne} exact />
+          <Route path="/halltwo" component={HallTwo} exact />
           <Route path="/:movieId"  component={Movie} exact />
 
 
