@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { API_URL, API_KEY, IMAGE_BASE_URL, POSTER_SIZE, BACKDROP_SIZE } from '../../config'
 
 import HeroImage from '../elements/HeroImage/HeroImage'
-
-import FourColGrid from '../elements/FourColGrid/FourColGrid'
 import HallOneMovieThumb from './HallOneMovieThumb'
 import HallOneColGrid from './HallOneColGrid'
 
@@ -86,7 +84,7 @@ class Hala extends Component {
               text={this.state.heroImage.overview}
                />
           </div> : null}
-        <Container className="mt-5 mb-5">
+        <Container className="mt-2 mb-3">
           <Row>
             <Col sm={12}>
         <HallOneColGrid
@@ -105,6 +103,7 @@ class Hala extends Component {
                        vote_count={element.vote_count}
                        overview={element.overview}
                        date={element.release_date}
+                       vote_average={element.vote_average}
                      />
             })}
           </HallOneColGrid>

@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 // import './MovieThumb.css'
-import Media from 'react-bootstrap/Media'
+
 
 import {Container, Row, Col} from 'react-bootstrap'
 import 'bootstrap-css-only/css/bootstrap.min.css';
@@ -54,6 +54,10 @@ const HallOneMovieThumb = (props) => {
     
     <p>
     {props.date}
+    </p>
+
+    <p>
+      {props.vote_average}
     </p>
   
   </Col>

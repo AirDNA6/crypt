@@ -27,7 +27,7 @@ class Home extends Component {
     this.setState({
       loading: true
     })
-    const endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`
+    const endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`
     this.fetchItems(endpoint)
   }
 
@@ -42,7 +42,7 @@ class Home extends Component {
     })
 
     if (searchTerm === '') {
-      endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`
+      endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`
     } else {
 
       endpoint = ` ${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${searchTerm}
@@ -61,9 +61,9 @@ class Home extends Component {
     })
 
     if (this.state.searchTerm === '') {
-      endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=${this.state.currentPage + 1}`
+      endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&page=${this.state.currentPage + 1}`
     } else {
-      endpoint = `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${this.state.searchTerm}&page=${this.state.currentPage + 1}`
+      endpoint = `${API_URL}search/now_playing?api_key=${API_KEY}&language=en-US&query=${this.state.searchTerm}&page=${this.state.currentPage + 1}`
     }
 
     this.fetchItems(endpoint)
@@ -101,7 +101,7 @@ class Home extends Component {
           </div> : null}
         <div className="rmdb-home-grid">
         <FourColGrid
-            header={this.state.searchTerm ? `Search Result: ${this.state.totalResults}` : `Popular Movies: ${this.state.totalResults}`}
+            header={this.state.searchTerm ? `Search Result: ${this.state.totalResults}` : `Now playing: ${this.state.totalResults}`}
             loading={this.state.loading}
             >
             {this.state.movies.map ( (element, i) => {
