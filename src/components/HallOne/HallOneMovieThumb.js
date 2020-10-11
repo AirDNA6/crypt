@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 // import './MovieThumb.css'
 
 
-import {Container, Row, Col} from 'react-bootstrap'
+import { Row, Col} from 'react-bootstrap'
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
  

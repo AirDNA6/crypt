@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
-import Header from '../elements/Header/Header'
-import Footer from '../elements/Footer/Footer'
+import Header from '../Header/Header'
+import Footer from '../Footer/Footer'
 import Home from '../Home/Home'
 import About from '../About/About'
 import Halls from '../Halls/HallInfo'
@@ -10,7 +10,7 @@ import Movie from '../Movie/Movie'
 import NotFound from '../elements/NotFound/NotFound'
 import ScrollToTop from '../ScrollToTop'
 import Scroll from '../Scroll'
-import Faq from '../Faq'
+import Faq from '../Faq/Faq'
 import HallOne from '../HallOne/HallOne'
 import HallTwo from '../HallTwo/HallTwo'
 

@@ -78,6 +78,7 @@ class Hala extends Component {
       <div >
         {this.state.heroImage ?
           <div>
+            
             <HeroImage
               image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${this.state.heroImage.backdrop_path}`}
               title={this.state.heroImage.original_title}

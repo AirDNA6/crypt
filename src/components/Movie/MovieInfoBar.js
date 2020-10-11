@@ -1,7 +1,7 @@
 import React from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faClock, faDollarSign, faTicketAlt } from '@fortawesome/free-solid-svg-icons'
-import { calcTime, convertMoney } from "../../../helpers.js"
+import { calcTime, convertMoney } from "../../helpers.js"
 import './MovieInfoBar.css'
 
 const MovieInfoBar = (props) => {

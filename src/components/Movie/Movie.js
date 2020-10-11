@@ -1,13 +1,12 @@
 import React, {Component} from 'react'
 import {API_URL, API_KEY} from '../../config'
-import Navigation from '../elements/Navigation/Navigation'
+import Navigation from './Navigation'
 import MovieInfo from '../elements/MovieInfo/MovieInfo'
-import MovieInfoBar from '../elements/MovieBar/MovieInfoBar'
+import MovieInfoBar from './MovieInfoBar'
 import FourColGrid from '../elements/FourColGrid/FourColGrid'
-import Actor from '../elements/Actor/Actor'
+import Actor from './Actor'
 import Spinner from '../elements/Spinner/Spinner'
 import './Movie.css'
-
 class Movie extends Component {
   state = {
     movie: null,
