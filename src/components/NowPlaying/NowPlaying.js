@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom'
-
 import { API_URL, API_KEY, IMAGE_BASE_URL, POSTER_SIZE, BACKDROP_SIZE } from '../../config'
 
 import HeroImage from '../elements/HeroImage/HeroImage'
 import SearchBar from './SearchBar'
-
+import FourColGrid from '../elements/FourColGrid/FourColGrid'
 import MovieThumb from '../elements/MovieThumb/MovieThumb'
 import LoadMoreBtn from './LoadMoreBtn'
 import Spinner from '../elements/Spinner/Spinner'
-import HomeColGrid from './HomeColGrid'
+
 
 import './Home.css'
 
-class Home extends Component {
+class NowPlaying extends Component {
   state = {
     movies: [],
     heroImage: null,
@@ -29,33 +27,48 @@ class Home extends Component {
     this.setState({
       loading: true
     })
-    const endpoint = `${API_URL}movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`
+    const endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`
     this.fetchItems(endpoint)
   }
 
 
-  // searchItems = (searchTerm) => {
-  //   console.log(searchTerm);
-  //   let endpoint = ''
-  //   this.setState({
-  //     movies: [],
-  //     loading: true,
-  //     searchTerm
-  //   })
+  searchItems = (searchTerm) => {
+    console.log(searchTerm);
+    let endpoint = ''
+    this.setState({
+      movies: [],
+      loading: true,
+      searchTerm
+    })
 
-  //   if (searchTerm === '') {
-  //     endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`
-  //   } else {
+    if (searchTerm === '') {
+      endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`
+    } else {
 
-  //     endpoint = ` ${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${searchTerm}
-  //   `
+      endpoint = ` ${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${searchTerm}
+    `
     
-  //   }
+    }
 
-  //   this.fetchItems(endpoint)
+    this.fetchItems(endpoint)
 
-  // }
+  }
 
+  loadMoreItems = () => {
+    let endpoint = ''
+    this.setState({
+      loading: true
+    })
+
+    if (this.state.searchTerm === '') {
+      endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&page=${this.state.currentPage + 1}`
+    } else {
+      endpoint = `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${this.state.searchTerm}&page=${this.state.currentPage + 1}`
+    }
+
+    this.fetchItems(endpoint)
+
+  }
 
   fetchItems = (endpoint) => {
     fetch(endpoint)
@@ -73,6 +86,8 @@ class Home extends Component {
     .catch(error => console.error('Error:', error))
   }
 
+
+
   render() {
     return (
       <div className="rmdb-home">
@@ -82,11 +97,11 @@ class Home extends Component {
               image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${this.state.heroImage.backdrop_path}`}
               title={this.state.heroImage.original_title}
               text={this.state.heroImage.overview} />
-            {/* <SearchBar callback={this.searchItems} /> */}
+            <SearchBar callback={this.searchItems} />
           </div> : null}
         <div className="rmdb-home-grid">
-        <HomeColGrid
-            header={`Top 10 rated movies`}
+        <FourColGrid
+            header={this.state.searchTerm ? `Search Result: ${this.state.totalResults}` : `Now playing: ${this.state.totalResults}`}
             loading={this.state.loading}
             >
             {this.state.movies.map ( (element, i) => {
@@ -98,10 +113,11 @@ class Home extends Component {
                         movieName={element.original_title}
                      />
             })}
-          </HomeColGrid>
+          </FourColGrid>
           {this.state.loading ? <Spinner /> : null}
-         
+          {(this.state.currentPage <= this.state.totalPages && !this.state.loading) ? <LoadMoreBtn text="Load More" onClick={this.loadMoreItems}/> : null }
         </div>
+
 
       </div>
     )
@@ -109,4 +125,4 @@ class Home extends Component {
 
 }
 
-export default Home
+export default NowPlaying

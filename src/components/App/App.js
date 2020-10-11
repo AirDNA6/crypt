@@ -3,6 +3,7 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import Home from '../Home/Home'
+import NowPlaying from '../NowPlaying/NowPlaying'
 import About from '../About/About'
 import Halls from '../Halls/HallInfo'
 import Contact from '../Contact/Contact'
@@ -29,6 +30,7 @@ const App = () => {
       <Scroll showBelow={250} />
         <Switch>
           <Route path="/" component={Home} exact />
+          <Route path="/nowPlaying" component={NowPlaying} exact />
           <Route path="/halls" component={Halls} exact />
           <Route path="/about" component={About} exact />
           <Route path="/contact" component={Contact} exact />
