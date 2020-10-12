@@ -6,14 +6,16 @@ import "mdbreact/dist/css/mdb.css";
 import Image from "react-bootstrap/Image";
 import { Container, Row, Col } from "react-bootstrap";
 import "./HallInfo.css";
-
+import {Link} from 'react-router-dom'
 class About extends Component {
   render() {
     return (
       <div>
         <Container className="aboutBack mb-5 mt-5">
           <Row className="aboutBack">
-            <h1 className="mx-auto">Hall 1</h1>
+            <Link to="hallone" className="mx-auto">
+            <h1>Hall 1</h1>
+            </Link>
           </Row>
 
           <Row className="aboutBack mb-5 mt-5 ">
@@ -37,7 +39,9 @@ class About extends Component {
 
         <Container className="aboutBack mt-5">
           <Row className="aboutBack">
-            <h1 className="mx-auto">Hall 2</h1>
+          <Link to="halltwo" className="mx-auto">
+            <h1>Hall 2</h1>
+            </Link>
           </Row>
 
           <Row className="aboutBack mb-5 mt-5 ">

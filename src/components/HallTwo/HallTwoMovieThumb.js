@@ -9,6 +9,27 @@ import 'mdbreact/dist/css/mdb.css';
  
 
 const HallTwoMovieThumb = (props) => {
+
+  function currentDay(props) {
+    let dateObj = new Date()
+    let weekday = dateObj.toLocaleString("default", { weekday: "long" })
+    return <div>Broadcast: {weekday}</div>;
+  }
+  
+  function movieStarting() {
+    let time = ["12:30h","14:00h","16:00h","18:30h", "20:00h"];
+    let randomIndex = Math.floor(Math.random() * time.length);
+    let randomNumber = time[randomIndex]
+    time.splice(randomIndex, 1)
+    console.log(randomNumber)
+
+    return <div>Movie starts at: {randomNumber}</div>;
+  //  let randomTime = time[Math.floor(Math.random() * time.length)];
+  
+  }
+
+
+
   return (
     <div>
      
@@ -20,6 +41,9 @@ const HallTwoMovieThumb = (props) => {
         :
         <img src={props.image} alt="moviethumb" />
       } */}
+
+
+
 
 <Row className="mt-5">
         <Col sm={12} md="4" >
@@ -47,17 +71,25 @@ const HallTwoMovieThumb = (props) => {
       
       <Col sm={12} md={8}>
  
-  <h1>{props.movieName}</h1>
+      <h1>{props.movieName}</h1>
     <p>
      {props.overview}
     </p>
     
     <p>
-    {props.date}
+    Realese date: {props.date}
     </p>
 
     <p>
-      {props.vote_average}
+      Rating: {props.vote_average}
+    </p>
+
+    <p>
+     {currentDay()}
+    </p>
+
+    <p>
+      {movieStarting()}
     </p>
   
   </Col>

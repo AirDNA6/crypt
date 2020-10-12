@@ -15,7 +15,7 @@ const HallOneMovieThumb = (props) => {
   function currentDay(props) {
     let dateObj = new Date()
     let weekday = dateObj.toLocaleString("default", { weekday: "long" })
-    return <div>{weekday}</div>;
+    return <div>Broadcast: {weekday}</div>;
   }
   
   function movieStarting() {
@@ -25,7 +25,7 @@ const HallOneMovieThumb = (props) => {
     time.splice(randomIndex, 1)
     console.log(randomNumber)
 
-    return <div>{randomNumber}</div>;
+    return <div>Movie starts at: {randomNumber}</div>;
   //  let randomTime = time[Math.floor(Math.random() * time.length)];
   
   }
@@ -78,15 +78,15 @@ var randColor = colors[Math.floor(Math.random() * colors.length)];
     </p>
     
     <p>
-    {props.date}
+    Realese date: {props.date}
     </p>
 
     <p>
-      {props.vote_average}
+      Rating: {props.vote_average}
     </p>
 
     <p>
-      {currentDay()}
+     {currentDay()}
     </p>
 
     <p>

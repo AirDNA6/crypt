@@ -11,6 +11,11 @@ import LoadMoreBtn from './LoadMoreBtn'
 import Spinner from '../elements/Spinner/Spinner'
 import HomeColGrid from './HomeColGrid'
 
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'bootstrap-css-only/css/bootstrap.min.css';
+import 'mdbreact/dist/css/mdb.css';
+import { MDBJumbotron, MDBContainer, MDBRow, MDBCol, MDBIcon, MDBCardTitle, MDBCardImage, MDBCardBody, MDBCardText } from "mdbreact";
+
 import './Home.css'
 
 class Home extends Component {
@@ -75,6 +80,10 @@ class Home extends Component {
 
   render() {
     return (
+
+               
+<div>
+
       <div className="rmdb-home">
         {this.state.heroImage ?
           <div>
@@ -84,6 +93,9 @@ class Home extends Component {
               text={this.state.heroImage.overview} />
             {/* <SearchBar callback={this.searchItems} /> */}
           </div> : null}
+
+
+
         <div className="rmdb-home-grid">
         <HomeColGrid
             header={`Top 10 rated movies`}
@@ -102,10 +114,41 @@ class Home extends Component {
           {this.state.loading ? <Spinner /> : null}
          
         </div>
+     </div>
+        <MDBContainer className="mt-5 text-center">
+      <MDBRow>
+        <MDBCol>
+          <MDBJumbotron className="text-center">
+            <MDBCardTitle className="card-title h4 pb-2">
+              <strong>Marvel Nights & DC Night</strong>
+            </MDBCardTitle>
 
-        
+            <MDBCardImage
+              src="./images/mvsd.jpg"
+              style={{width: "100%"}}
+              className="img-fluid mx-auto"
+            />
+            <MDBCardBody>
+              <MDBCardTitle className="indigo-text h5 m-4">
+               SPECIAL EVENT
+              </MDBCardTitle>
+              <MDBCardText>
+                We are calling all superheroes to join us as the Crypt take on the Belgrade. 
+                Your special event ticket purchase includes a winning price a limited themed Hulkbuster Bobblehead!
+                Be sure to come dressed as your favorite superhero for what is to be a truly marvelous night! Buy your tickets soon and join in on the superhero action!
+              </MDBCardText>
 
-      </div>
+
+            </MDBCardBody>
+          </MDBJumbotron>
+        </MDBCol>
+      </MDBRow>
+    </MDBContainer>
+
+
+        </div>
+
+
     )
   }
 
