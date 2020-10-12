@@ -22,7 +22,6 @@
     "google-maps-react": "^2.0.6",
     "mdbreact": "^4.27.0",
     "minimap-react": "^1.1.2",
-    "nodemailer": "^6.4.11",
     "nodemon": "^2.0.4",
     "react": "^16.13.1",
     "react-accessible-accordion": "^3.3.3",

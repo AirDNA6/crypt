@@ -8,13 +8,38 @@ import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
  
 
+
 const HallOneMovieThumb = (props) => {
+
+
+  function currentDay(props) {
+    let dateObj = new Date()
+    let weekday = dateObj.toLocaleString("default", { weekday: "long" })
+    return <div>{weekday}</div>;
+  }
+  
+  function movieStarting() {
+    let time = ["12:30h","14:00h","16:00h","18:30h", "20:00h"];
+    let randomIndex = Math.floor(Math.random() * time.length);
+    let randomNumber = time[randomIndex]
+    time.splice(randomIndex, 1)
+    console.log(randomNumber)
+
+    return <div>{randomNumber}</div>;
+  //  let randomTime = time[Math.floor(Math.random() * time.length)];
+  
+  }
   return (
     <div>
      
       {/* {props.clickable ?
         <Link to={{ pathname: `/${props.movieId}`, movieName: `${props.movieName}` }}>
           <img src={props.image} alt="moviethumb" />
+
+
+var colors = ["red","blue","green","yellow"];
+var randColor = colors[Math.floor(Math.random() * colors.length)];
+
       
         </Link>
         :
@@ -58,6 +83,14 @@ const HallOneMovieThumb = (props) => {
 
     <p>
       {props.vote_average}
+    </p>
+
+    <p>
+      {currentDay()}
+    </p>
+
+    <p>
+      {movieStarting()}
     </p>
   
   </Col>
