@@ -102,12 +102,12 @@ class Home extends Component {
           show
           fade
           icon="bell"
-          iconClassName="blue-grey-text"
-          closeClassName="white-text"
+          iconClassName="green-text"
+          closeClassName="green-text"
           title="SPECIAL EVENT"
           message="2000s MOVIES IN MX4D"
-          text="just now"
-          titleClassName="elegant-color-dark white-text"
+          // text="just now"
+          titleClassName=" green-text"
         />
         <MDBNotification
           // autohide={10000}
@@ -116,13 +116,13 @@ class Home extends Component {
           bodyClassName="p-5 font-weight-bold white-text"
           className="stylish-color-dark"
           icon="bell"
-          iconClassName="blue-grey-text"
-          closeClassName="white-text"
+          iconClassName="red-text"
+          closeClassName="red-text"
           title="MARVEL NIGHT"
           message="“Part of the journey is the end.”
           ~ Tony Stark, Avengers: Endgame"
-          text="2 seconds ago"
-          titleClassName="elegant-color-dark white-text"
+          // text="2 seconds ago"
+          titleClassName="red-text"
         />
 
 <MDBNotification
@@ -132,12 +132,12 @@ class Home extends Component {
           className="stylish-color-dark"
           fade
           icon="bell"
-          iconClassName="blue-grey-text"
-          closeClassName="white-text"
+          iconClassName="blue-text"
+          closeClassName="blue-text"
           title="DC NIGHT"
           message="Sometimes It's Only Madness That Makes Us What We Are."
-          text="2 seconds ago"
-          titleClassName="elegant-color-dark white-text"
+          // text="2 seconds ago"
+          titleClassName=" blue-text"
         />
       </MDBContainer>
     

@@ -7,6 +7,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+import { googleMap } from "../../utils/googleMap";
 import "./Footer.css";
 
 const mapStyles = {
@@ -260,5 +261,5 @@ class Footer extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyCcb-aELf1jmn0J9R5U-C6_WJVf0StZroo'
+  apiKey: googleMap
 })(Footer);
