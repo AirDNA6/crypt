@@ -11,11 +11,13 @@ import LoadMoreBtn from './LoadMoreBtn'
 import Spinner from '../elements/Spinner/Spinner'
 import HomeColGrid from './HomeColGrid'
 
+
+import { MDBJumbotron, MDBContainer, MDBRow, MDBCol, MDBIcon, MDBCardTitle, MDBCardImage, MDBCardBody, MDBCardText } from "mdbreact";
+import { MDBNotification } from "mdbreact";
+
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
-import { MDBJumbotron, MDBContainer, MDBRow, MDBCol, MDBIcon, MDBCardTitle, MDBCardImage, MDBCardBody, MDBCardText } from "mdbreact";
-
 import './Home.css'
 
 class Home extends Component {
@@ -83,6 +85,62 @@ class Home extends Component {
 
                
 <div>
+
+<MDBContainer
+        style={{
+          width: "auto",
+          position: "fixed",
+          top: "10px",
+          right: "10px",
+          zIndex: 9999
+        }}
+      >
+        <MDBNotification
+          // autohide={8000}
+           bodyClassName="p-5 font-weight-bold white-text"
+          className="stylish-color-dark"
+          show
+          fade
+          icon="bell"
+          iconClassName="blue-grey-text"
+          closeClassName="white-text"
+          title="SPECIAL EVENT"
+          message="2000s MOVIES IN MX4D"
+          text="just now"
+          titleClassName="elegant-color-dark white-text"
+        />
+        <MDBNotification
+          // autohide={10000}
+          show
+          fade
+          bodyClassName="p-5 font-weight-bold white-text"
+          className="stylish-color-dark"
+          icon="bell"
+          iconClassName="blue-grey-text"
+          closeClassName="white-text"
+          title="MARVEL NIGHT"
+          message="“Part of the journey is the end.”
+          ~ Tony Stark, Avengers: Endgame"
+          text="2 seconds ago"
+          titleClassName="elegant-color-dark white-text"
+        />
+
+<MDBNotification
+          // autohide={13000}
+          show
+          bodyClassName="p-5 font-weight-bold white-text"
+          className="stylish-color-dark"
+          fade
+          icon="bell"
+          iconClassName="blue-grey-text"
+          closeClassName="white-text"
+          title="DC NIGHT"
+          message="Sometimes It's Only Madness That Makes Us What We Are."
+          text="2 seconds ago"
+          titleClassName="elegant-color-dark white-text"
+        />
+      </MDBContainer>
+    
 
       <div className="rmdb-home">
         {this.state.heroImage ?

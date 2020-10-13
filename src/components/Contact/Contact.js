@@ -4,7 +4,7 @@ import { MDBRow, MDBCol, MDBInput, MDBBtn} from "mdbreact";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
-
+import { MDBNotification } from "mdbreact";
 
 class Contact extends Component {
   state = {
@@ -50,7 +50,6 @@ class Contact extends Component {
             .then((result) => {
                 console.log(result.text);
                 alert('Email sent')
-             
             }, (error) => {
                 console.log(error.text);
             });
