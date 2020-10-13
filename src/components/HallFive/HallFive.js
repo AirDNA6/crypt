@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { API_URL, API_KEY, IMAGE_BASE_URL, POSTER_SIZE, BACKDROP_SIZE } from '../../config'
 
 import HeroImage from '../elements/HeroImage/HeroImage'
-import HallOneMovieThumb from './HallOneMovieThumb'
-import HallOneColGrid from './HallOneColGrid'
+import HallFiveMovieThumb from './HallFiveMovieThumb'
+import HallFiveColGrid from './HallFiveColGrid'
 
 import {Container, Row, Col} from 'react-bootstrap'
 import 'bootstrap-css-only/css/bootstrap.min.css';
@@ -12,7 +12,7 @@ import 'mdbreact/dist/css/mdb.css';
 
 import './Hala.css'
 
-class Hala extends Component {
+class HallThree extends Component {
   state = {
     movies: [],
     heroImage: null,
@@ -35,8 +35,8 @@ class Hala extends Component {
     //
     //https://api.themoviedb.org/3/discover/movie?api_key=844dba0bfd8f3a4f3799f6130ef9e335&language=en-US&with_genres=28
     //`${API_URL}discover/movie?api_key=${API_KEY}&language=en-US&with_genres=16`
-                                                                              //family, comedy
-    const endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&with_genres=10751,35&page=1`
+                                                                //SCI-FI    
+    const endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&with_genres=878&page=1`
     this.fetchItems(endpoint)
   }
 
@@ -79,7 +79,6 @@ class Hala extends Component {
       <div >
         {this.state.heroImage ?
           <div>
-            
             <HeroImage
               image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${this.state.heroImage.backdrop_path}`}
               title={this.state.heroImage.original_title}
@@ -89,14 +88,14 @@ class Hala extends Component {
         <Container className="mt-2 mb-3">
           <Row>
             <Col sm={12}>
-        <HallOneColGrid
+        <HallFiveColGrid
         //: ${this.state.totalResults}
-        header={`Family Movies`}
+        header={`Fantasy Movies`}
             loading={this.state.loading}
         //    vote_count={this.state.vote_count}
             >
             {this.state.movies.map ( (element, i) => {
-              return <HallOneMovieThumb
+              return <HallFiveMovieThumb
                         key={i}
                         clickable={true}
                         image={element.poster_path ? `${IMAGE_BASE_URL}${POSTER_SIZE}${element.poster_path}` : './images/no_image.png'}
@@ -108,7 +107,7 @@ class Hala extends Component {
                        vote_average={element.vote_average}
                      />
             })}
-          </HallOneColGrid>
+          </HallFiveColGrid>
           </Col>
           </Row>
         </Container>
@@ -120,4 +119,4 @@ class Hala extends Component {
 
 }
 
-export default Hala
+export default HallThree

@@ -65,7 +65,9 @@ class About extends Component {
 
         <Container className="aboutBack mt-5">
           <Row className="aboutBack">
-            <h1 className="mx-auto">Hall 3</h1>
+          <Link to="hallthree" className="mx-auto">
+            <h1>Hall 3</h1>
+            </Link>
           </Row>
 
           <Row className="aboutBack mb-5 mt-5 ">

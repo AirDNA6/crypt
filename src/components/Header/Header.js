@@ -23,7 +23,7 @@ const Header = () => {
     </Nav> */}
 
 
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar collapseOnSelect expand="xl" bg="dark" variant="dark">
     <Link to="/">
           <img src="./images/logo.png" alt="crypt-logo" className="rmdb-logo" />
         </Link>
@@ -32,6 +32,24 @@ const Header = () => {
     <Nav className="mr-auto">
     <Link to="/" className="navLink mt-2">HOME</Link>
     <Link to="nowplaying" className="navLink mt-2">NOW PLAYING</Link>
+    <NavDropdown title="SPECIAL EVENTS" id="basic-nav-dropdown" className="navLink">
+
+        <NavDropdown.Item>
+        <Link to="mx4d2000">2000s Movies MX4D</Link>
+
+        </NavDropdown.Item>
+
+        <NavDropdown.Item>
+        <Link to="halltwo">Marvel Night</Link>
+
+        </NavDropdown.Item>
+
+        <NavDropdown.Item>
+        <Link to="hallthree">DC Night</Link>
+
+        </NavDropdown.Item>
+        </NavDropdown>
+       
     <Link to="halls" className="navLink mt-2">HALL INFO</Link>
     <Link to="about" className="navLink mt-2">ABOUT</Link>
       <Link to="contact" className="navLink mt-2">CONTACT US</Link>
@@ -46,6 +64,26 @@ const Header = () => {
 
         <NavDropdown.Item>
         <Link to="halltwo">HALL 2</Link>
+
+        </NavDropdown.Item>
+
+        <NavDropdown.Item>
+        <Link to="hallthree">HALL 3</Link>
+
+        </NavDropdown.Item>
+
+        <NavDropdown.Item>
+        <Link to="hallfour">HALL 4</Link>
+
+        </NavDropdown.Item>
+
+        <NavDropdown.Item>
+        <Link to="hallfive">HALL 5</Link>
+
+        </NavDropdown.Item>
+
+        <NavDropdown.Item>
+        <Link to="hallsix">HALL 6</Link>
 
         </NavDropdown.Item>
 
