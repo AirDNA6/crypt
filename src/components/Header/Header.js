@@ -39,13 +39,15 @@ const Header = () => {
 
         </NavDropdown.Item>
 
+        <NavDropdown.Divider />
         <NavDropdown.Item>
-        <Link to="halltwo">Marvel Night</Link>
+        <Link to="marvelnight">Marvel Night</Link>
 
         </NavDropdown.Item>
 
+        <NavDropdown.Divider />
         <NavDropdown.Item>
-        <Link to="hallthree">DC Night</Link>
+        <Link to="dcnight">DC Night</Link>
 
         </NavDropdown.Item>
         </NavDropdown>
@@ -57,42 +59,47 @@ const Header = () => {
 
       <NavDropdown title="HALLS" id="basic-nav-dropdown" className="navLink">
 
+      
         <NavDropdown.Item>
         <Link to="hallone">HALL 1</Link>
 
         </NavDropdown.Item>
 
+        <NavDropdown.Divider />
         <NavDropdown.Item>
         <Link to="halltwo">HALL 2</Link>
 
         </NavDropdown.Item>
 
+        <NavDropdown.Divider />
         <NavDropdown.Item>
         <Link to="hallthree">HALL 3</Link>
 
         </NavDropdown.Item>
 
+        <NavDropdown.Divider />
         <NavDropdown.Item>
         <Link to="hallfour">HALL 4</Link>
 
         </NavDropdown.Item>
 
+        <NavDropdown.Divider />
         <NavDropdown.Item>
         <Link to="hallfive">HALL 5</Link>
 
         </NavDropdown.Item>
 
+        <NavDropdown.Divider />
         <NavDropdown.Item>
         <Link to="hallsix">HALL 6</Link>
 
         </NavDropdown.Item>
+        
 
         {/* <NavDropdown.Item href="#action/3.3">
         <Link to="contact">Hall 2</Link>
         </NavDropdown.Item> */}
 
-        <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
       </NavDropdown>      
     </Nav>
 
