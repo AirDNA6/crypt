@@ -11,7 +11,7 @@ import Spinner from '../elements/Spinner/Spinner'
 
 import './Home.css'
 
-class MX4D2000 extends Component {
+class DC extends Component {
   state = {
     movies: [],
     heroImage: null,
@@ -27,7 +27,7 @@ class MX4D2000 extends Component {
     this.setState({
       loading: true
     })
-    const endpoint = `${API_URL}discover/movie?api_key=${API_KEY}&language=en-US&sort_by=revenue.desc&include_adult=false&include_video=false&primary_release_date.gte=1999-12-31&primary_release_date.lte=2010-01-01&page=1`
+    const endpoint = `${API_URL}discover/movie?api_key=${API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_companies=429`
     this.fetchItems(endpoint)
   }
 
@@ -42,7 +42,7 @@ class MX4D2000 extends Component {
     })
 
     if (searchTerm === '') {
-      const endpoint = `${API_URL}discover/movie?api_key=${API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&primary_release_date.gte=1999-12-31&primary_release_date.lte=2010-01-01&page=1`
+      const endpoint = `${API_URL}discover/movie?api_key=${API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_companies=429`
     } else {
 
       endpoint = ` ${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${searchTerm}
@@ -61,7 +61,7 @@ class MX4D2000 extends Component {
     })
 
     if (this.state.searchTerm === '') {
-      endpoint = `${API_URL}discover/movie?api_key=${API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&primary_release_date.gte=1999-12-31&primary_release_date.lte=2010-01-01&page=${this.state.currentPage + 1}`
+      endpoint = `${API_URL}discover/movie?api_key=${API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_companies=429&page=${this.state.currentPage + 1}`
     } else {
       endpoint = `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${this.state.searchTerm}&page=${this.state.currentPage + 1}`
     }
@@ -76,7 +76,7 @@ class MX4D2000 extends Component {
     .then(result => {
       this.setState({
         movies: [...this.state.movies, ...result.results],
-        heroImage: this.state.heroImage || result.results[3],
+        heroImage: this.state.heroImage || result.results[0],
         loading: false,
         currentPage: result.page,
         totalPages: result.total_pages,
@@ -125,4 +125,4 @@ class MX4D2000 extends Component {
 
 }
 
-export default MX4D2000
+export default DC

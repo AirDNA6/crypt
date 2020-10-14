@@ -12,7 +12,7 @@ const FourColGrid = (props) => {
       </div>
       )
     })
-    return gridElements
+    return gridElements.splice(0,30)
     //.splice(0, 5)
 
   }

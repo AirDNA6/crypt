@@ -4,7 +4,7 @@ import { API_URL, API_KEY, IMAGE_BASE_URL, POSTER_SIZE, BACKDROP_SIZE } from '..
 import HeroImage from '../elements/HeroImage/HeroImage'
 import HallThreeMovieThumb from './HallThreeMovieThumb'
 import HallThreeColGrid from './HallThreeColGrid'
-
+import Navbar from 'react-bootstrap/Navbar'
 import {Container, Row, Col} from 'react-bootstrap'
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
@@ -77,6 +77,9 @@ class HallThree extends Component {
   render() {
     return (
       <div >
+
+
+
         {this.state.heroImage ?
           <div>
             <HeroImage
@@ -85,6 +88,11 @@ class HallThree extends Component {
               text={this.state.heroImage.overview}
                />
           </div> : null}
+
+          <Navbar sticky="top" className="justify-content-center fontQuanticoHeader" style={{ backgroundColor: "#21d192", color: "#343A40"}}>
+    <Navbar.Brand style={{ backgroundColor: "#21d192", color: "#343A40"}}>HALL 3</Navbar.Brand>
+  </Navbar>
+
         <Container className="mt-2 mb-3">
           <Row>
             <Col sm={12}>

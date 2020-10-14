@@ -4,7 +4,7 @@ import { API_URL, API_KEY, IMAGE_BASE_URL, POSTER_SIZE, BACKDROP_SIZE } from '..
 import HeroImage from '../elements/HeroImage/HeroImage'
 import HallOneMovieThumb from './HallOneMovieThumb'
 import HallOneColGrid from './HallOneColGrid'
-
+import Navbar from 'react-bootstrap/Navbar'
 import {Container, Row, Col} from 'react-bootstrap'
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
@@ -77,15 +77,21 @@ class Hala extends Component {
   render() {
     return (
       <div >
+
         {this.state.heroImage ?
           <div>
-            
+
             <HeroImage
               image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${this.state.heroImage.backdrop_path}`}
               title={this.state.heroImage.original_title}
               text={this.state.heroImage.overview}
                />
           </div> : null}
+
+          <Navbar sticky="top" className="justify-content-center fontQuanticoHeader" style={{ backgroundColor: "#21d192", color: "#343A40"}}>
+    <Navbar.Brand style={{ backgroundColor: "#21d192", color: "#343A40"}}>HALL 1</Navbar.Brand>
+  </Navbar>
+
         <Container className="mt-2 mb-3">
           <Row>
             <Col sm={12}>

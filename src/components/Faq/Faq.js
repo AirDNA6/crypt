@@ -18,14 +18,14 @@ const useStyles = makeStyles((theme) => ({
     flexShrink: 0,
     fontFamily: 'Quantico',
     color: '#21d192',
-    fontSize: '25px'
+    fontSize: '20px'
   },
   secondaryHeading: {
     fontSize: theme.typography.pxToRem(15),
     color: theme.palette.text.secondary,
     fontFamily: 'Quantico',
     color: '#fff',
-    fontSize: '22px'
+    fontSize: '18px'
   },
 }));
 

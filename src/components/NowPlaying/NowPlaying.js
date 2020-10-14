@@ -101,7 +101,7 @@ class NowPlaying extends Component {
           </div> : null}
         <div className="rmdb-home-grid">
         <FourColGrid
-            header={this.state.searchTerm ? `Search Result: ${this.state.totalResults}` : `Now playing: ${this.state.totalResults}`}
+            header={this.state.searchTerm ? `Search Result` : `Now playing`}
             loading={this.state.loading}
             >
             {this.state.movies.map ( (element, i) => {

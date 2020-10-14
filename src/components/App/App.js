@@ -19,6 +19,8 @@ import HallFour from '../HallFour/HallFour'
 import HallFive from '../HallFive/HallFive'
 import HallSix from '../HallSix/HallSix'
 import MX4D2000 from '../MX4D2000/MX4D2000'
+import Marvel from '../Marvel/Marvel'
+import DC from '../DC/DC'
 
 const App = () => {
 
@@ -35,6 +37,8 @@ const App = () => {
           <Route path="/" component={Home} exact />
           <Route path="/nowPlaying" component={NowPlaying} exact />
           <Route path="/mx4d2000" component={MX4D2000} exact />
+          <Route path="/marvelnight" component={Marvel} exact />
+          <Route path="/dcnight" component={DC} exact />
           <Route path="/halls" component={Halls} exact />
           <Route path="/about" component={About} exact />
           <Route path="/contact" component={Contact} exact />
