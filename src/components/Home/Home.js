@@ -96,7 +96,7 @@ class Home extends Component {
         }}
       >
         <MDBNotification
-          // autohide={8000}
+          autohide={8000}
            bodyClassName="p-5 font-weight-bold white-text"
           className="stylish-color-dark"
           show
@@ -110,7 +110,7 @@ class Home extends Component {
           titleClassName=" green-text"
         />
         <MDBNotification
-          // autohide={10000}
+          autohide={10000}
           show
           fade
           bodyClassName="p-5 font-weight-bold white-text"
@@ -126,7 +126,7 @@ class Home extends Component {
         />
 
 <MDBNotification
-          // autohide={13000}
+          autohide={13000}
           show
           bodyClassName="p-5 font-weight-bold white-text"
           className="stylish-color-dark"
