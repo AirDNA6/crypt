@@ -70,7 +70,7 @@ class Home extends Component {
     .then(result => {
       this.setState({
         movies: [...this.state.movies, ...result.results],
-        heroImage: this.state.heroImage || result.results[0],
+        heroImage: this.state.heroImage || result.results[5],
         loading: false,
         currentPage: result.page,
         totalPages: result.total_pages,

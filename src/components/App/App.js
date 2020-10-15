@@ -50,8 +50,6 @@ const App = () => {
           <Route path="/hallfive" component={HallFive} exact />
           <Route path="/hallsix" component={HallSix} exact />
           <Route path="/:movieId"  component={Movie} exact />
-
-
           <Route component={NotFound} />
         </Switch>
         <Footer />
