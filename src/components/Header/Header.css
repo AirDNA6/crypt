@@ -27,18 +27,11 @@
   float: right;
 }
 
-.navPosition{
-  float: left;
-  font-size: 20px;
-  margin-top: 25px;
-  margin-left: 50px;
-  padding: 10px;
-}
 
 .navLink{
   color: white;
-  margin-left: 50px;
-  font-size: 20px;
+  margin-left: 40px;
+  font-size: 18px;
   font-family: 'Quantico', sans-serif;
 }
 

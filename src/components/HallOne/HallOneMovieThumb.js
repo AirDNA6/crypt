@@ -13,9 +13,11 @@ const HallOneMovieThumb = (props) => {
 
 
   function currentDay(props) {
-    let dateObj = new Date()
-    let weekday = dateObj.toLocaleString("default", { weekday: "long" })
-    return <div>Broadcast: {weekday}</div>;
+    let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    let randomDay = days[Math.floor(Math.random() * days.length)];
+    // let dateObj = new Date()
+    // let weekday = dateObj.toLocaleString("default", { weekday: "long" })
+    return <div>Broadcast: {randomDay}</div>;
   }
   
   function movieStarting() {

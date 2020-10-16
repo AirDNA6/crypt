@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import { API_URL, API_KEY, IMAGE_BASE_URL, POSTER_SIZE, BACKDROP_SIZE } from '../../config'
 
 import HeroImage from '../elements/HeroImage/HeroImage'
-import SearchBar from './SearchBar'
 import FourColGrid from '../elements/FourColGrid/FourColGrid'
 import MovieThumb from '../elements/MovieThumb/MovieThumb'
-import LoadMoreBtn from './LoadMoreBtn'
 import Spinner from '../elements/Spinner/Spinner'
 
 
@@ -97,7 +95,6 @@ class NowPlaying extends Component {
               image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${this.state.heroImage.backdrop_path}`}
               title={this.state.heroImage.original_title}
               text={this.state.heroImage.overview} />
-            <SearchBar callback={this.searchItems} />
           </div> : null}
         <div className="rmdb-home-grid">
         <FourColGrid
@@ -115,7 +112,7 @@ class NowPlaying extends Component {
             })}
           </FourColGrid>
           {this.state.loading ? <Spinner /> : null}
-          {(this.state.currentPage <= this.state.totalPages && !this.state.loading) ? <LoadMoreBtn text="Load More" onClick={this.loadMoreItems}/> : null }
+         
         </div>
 
 

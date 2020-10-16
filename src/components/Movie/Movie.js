@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {API_URL, API_KEY} from '../../config'
-import Navigation from './Navigation'
+
 import MovieInfo from '../elements/MovieInfo/MovieInfo'
 import MovieInfoBar from './MovieInfoBar'
 import FourColGrid from '../elements/FourColGrid/FourColGrid'
@@ -66,7 +66,7 @@ class Movie extends Component {
       <div className="rmdb-movie">
         {this.state.movie ?
           <div>
-            <Navigation movie={this.props.location.movieName} />
+           
             <MovieInfo movie={this.state.movie} directors={this.state.directors} />
             <MovieInfoBar time={this.state.movie.runtime} budget={this.state.movie.budget} revenue={this.state.movie.revenue} />
           </div>

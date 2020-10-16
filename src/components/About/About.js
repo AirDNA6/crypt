@@ -42,17 +42,7 @@ class About extends Component {
 
 
         <Container>
-          <Row className="aboutBack mb-5 mt-5">
-
-            <Col sm={12} xs={12}  className="mt-5 mb-5 aboutFont">The Crypt was completely renovated in 2020 in accordance with the latest world standards. Reconstruction and adaptation of the old cinema space resulted in the first multiplex in Belgrade, with six superbly equipped halls, with a total capacity of almost 1,000 seats, as well as two catering facilities - Cinema and The End cafe.<br /> <br />
-            In addition to the regular film repertoire, the Crypt hosts ceremonial premieres of domestic films, as well as the FEST, Cinema City, Cinemania and Kids Fest festivals. An important segment of our offer is the possibility of purchasing concessions (popcorn, nachos and various soft drinks) that the audience can consume during the screening.
-            </Col>
-          </Row>
-        </Container>
-
-
-        <Container>
-          <Row className="aboutBackReverse mb-5">
+          <Row className="aboutBackReverse mb-5 mt-5">
 
             <Col sm={12} xs={12} lg={4} md={12} className="mt-3 mb-3">
               <img src="../images/projekcija1.jpg" className="img-fluid" alt="projekcija1" style={{width: '100%'}} />
@@ -68,6 +58,19 @@ class About extends Component {
             <Col sm>sm=true</Col>
           </Row> */}
         </Container>
+
+
+        <Container>
+          <Row className="aboutBack mb-5 mt-5">
+
+            <Col sm={12} xs={12}  className="mt-5 mb-5 aboutFont">The Crypt was completely renovated in 2020 in accordance with the latest world standards. Reconstruction and adaptation of the old cinema space resulted in the first multiplex in Belgrade, with six superbly equipped halls, with a total capacity of almost 1,000 seats, as well as two catering facilities - Cinema and The End cafe.<br /> <br />
+            In addition to the regular film repertoire, the Crypt hosts ceremonial premieres of domestic films, as well as the FEST, Cinema City, Cinemania and Kids Fest festivals. An important segment of our offer is the possibility of purchasing concessions (popcorn, nachos and various soft drinks) that the audience can consume during the screening.
+            </Col>
+          </Row>
+        </Container>
+
+
+
 
       </div>
 

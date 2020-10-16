@@ -101,7 +101,7 @@ class DC extends Component {
           </div> : null}
         <div className="rmdb-home-grid">
         <FourColGrid
-            header={this.state.searchTerm ? `Search Result` : `Now playing`}
+            header={`DC Movies`}
             loading={this.state.loading}
             >
             {this.state.movies.map ( (element, i) => {

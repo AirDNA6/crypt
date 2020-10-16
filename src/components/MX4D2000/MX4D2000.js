@@ -32,51 +32,13 @@ class MX4D2000 extends Component {
   }
 
 
-  searchItems = (searchTerm) => {
-    console.log(searchTerm);
-    let endpoint = ''
-    this.setState({
-      movies: [],
-      loading: true,
-      searchTerm
-    })
-
-    if (searchTerm === '') {
-      const endpoint = `${API_URL}discover/movie?api_key=${API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&primary_release_date.gte=1999-12-31&primary_release_date.lte=2010-01-01&page=1`
-    } else {
-
-      endpoint = ` ${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${searchTerm}
-    `
-    
-    }
-
-    this.fetchItems(endpoint)
-
-  }
-
-  loadMoreItems = () => {
-    let endpoint = ''
-    this.setState({
-      loading: true
-    })
-
-    if (this.state.searchTerm === '') {
-      endpoint = `${API_URL}discover/movie?api_key=${API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&primary_release_date.gte=1999-12-31&primary_release_date.lte=2010-01-01&page=${this.state.currentPage + 1}`
-    } else {
-      endpoint = `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${this.state.searchTerm}&page=${this.state.currentPage + 1}`
-    }
-
-    this.fetchItems(endpoint)
-
-  }
-
   fetchItems = (endpoint) => {
     fetch(endpoint)
     .then(result => result.json())
     .then(result => {
       this.setState({
         movies: [...this.state.movies, ...result.results],
-        heroImage: this.state.heroImage || result.results[3],
+        heroImage: this.state.heroImage || result.results[0],
         loading: false,
         currentPage: result.page,
         totalPages: result.total_pages,
@@ -97,11 +59,11 @@ class MX4D2000 extends Component {
               image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${this.state.heroImage.backdrop_path}`}
               title={this.state.heroImage.original_title}
               text={this.state.heroImage.overview} />
-            <SearchBar callback={this.searchItems} />
+         
           </div> : null}
         <div className="rmdb-home-grid">
         <FourColGrid
-            header={this.state.searchTerm ? `Search Result` : `Now playing`}
+            header={`MX4D 2000`}
             loading={this.state.loading}
             >
             {this.state.movies.map ( (element, i) => {
@@ -115,7 +77,7 @@ class MX4D2000 extends Component {
             })}
           </FourColGrid>
           {this.state.loading ? <Spinner /> : null}
-          {(this.state.currentPage <= this.state.totalPages && !this.state.loading) ? <LoadMoreBtn text="Load More" onClick={this.loadMoreItems}/> : null }
+          {/* {(this.state.currentPage <= this.state.totalPages && !this.state.loading) ? <LoadMoreBtn text="Load More" onClick={this.loadMoreItems}/> : null } */}
         </div>
 
 
