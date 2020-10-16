@@ -43,18 +43,19 @@ class Contact extends Component {
   render() {
 
     function sendEmail(e) {
-        e.preventDefault();
-
-     
-        emailjs.sendForm('gmail', 'template_5repv3t', e.target, 'user_mNhFpCEK5ZUqiJgQ1dBwE')
-            .then((result) => {
-                console.log(result.text);
+      e.preventDefault();
+      
+      emailjs.sendForm('gmail', 'template_5repv3t', e.target, 'user_mNhFpCEK5ZUqiJgQ1dBwE')
+      .then((result) => {
+        
+        console.log(result.text);
                 alert('Email sent')
+              
             }, (error) => {
                 console.log(error.text);
             });
            
-        e.target.reset()
+            e.target.reset()  
     }
 
 
