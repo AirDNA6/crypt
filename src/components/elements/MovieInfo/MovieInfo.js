@@ -1,6 +1,8 @@
 import React from 'react'
 import {IMAGE_BASE_URL, POSTER_SIZE, BACKDROP_SIZE} from '../../../config'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faFilm } from '@fortawesome/free-solid-svg-icons'
+import ReactStars from "react-rating-stars-component";
 import MovieThumb from '../MovieThumb/MovieThumb'
 import './MovieInfo.css'
 
@@ -33,8 +35,19 @@ const MovieInfo = (props) => {
           {props.directors.map( (element, i) => {
             return <p key={i} className="rmdb-director">{element.name}</p>
           })}
+
+<ReactStars
+    count={10}
+    //onChange={ratingChanged}
+    size={30}
+    isHalf={true}
+    emptyIcon={<i className="far fa-star"></i>}
+    halfIcon={<i className="fa fa-star-half-alt"></i>}
+    fullIcon={<i className="fa fa-star"></i>}
+    activeColor="#ffd700"
+  />
         </div>
-        <FontAwesomeIcon className="fa-film" name="film" size="5x"/>
+        <FontAwesomeIcon icon={faFilm} name="film" size="5x"/>
       </div>
     </div>
 

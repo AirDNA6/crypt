@@ -4,6 +4,7 @@ import {API_URL, API_KEY} from '../../config'
 import MovieInfo from '../elements/MovieInfo/MovieInfo'
 import MovieInfoBar from './MovieInfoBar'
 import FourColGrid from '../elements/FourColGrid/FourColGrid'
+
 import Actor from './Actor'
 import Spinner from '../elements/Spinner/Spinner'
 import './Movie.css'

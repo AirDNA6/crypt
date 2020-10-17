@@ -1,6 +1,6 @@
 .aboutBack{
   /* background-color: #343A40 !important; */
-  background: rgba(52, 58, 64);
+  background: rgba(52, 58, 64) !important;
   color: #21d192 !important;
   font-family: 'Quantico', sans-serif;
   border-radius: 10px;

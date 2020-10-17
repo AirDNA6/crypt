@@ -63,7 +63,9 @@ class About extends Component {
         <Container>
           <Row className="aboutBack mb-5 mt-5">
 
-            <Col sm={12} xs={12}  className="mt-5 mb-5 aboutFont">The Crypt was completely renovated in 2020 in accordance with the latest world standards. Reconstruction and adaptation of the old cinema space resulted in the first multiplex in Belgrade, with six superbly equipped halls, with a total capacity of almost 1,000 seats, as well as two catering facilities - Cinema and The End cafe.<br /> <br />
+            <Col sm={12} xs={12}  className="mt-5 mb-5 aboutFont" style={{
+                color: "#21d192"
+            }}>The Crypt was completely renovated in 2020 in accordance with the latest world standards. Reconstruction and adaptation of the old cinema space resulted in the first multiplex in Belgrade, with six superbly equipped halls, with a total capacity of almost 1,000 seats, as well as two catering facilities - Cinema and The End cafe.<br /> <br />
             In addition to the regular film repertoire, the Crypt hosts ceremonial premieres of domestic films, as well as the FEST, Cinema City, Cinemania and Kids Fest festivals. An important segment of our offer is the possibility of purchasing concessions (popcorn, nachos and various soft drinks) that the audience can consume during the screening.
             </Col>
           </Row>
