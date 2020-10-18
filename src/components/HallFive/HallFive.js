@@ -36,7 +36,7 @@ class HallThree extends Component {
     //https://api.themoviedb.org/3/discover/movie?api_key=844dba0bfd8f3a4f3799f6130ef9e335&language=en-US&with_genres=28
     //`${API_URL}discover/movie?api_key=${API_KEY}&language=en-US&with_genres=16`
                                                                 //SCI-FI    
-    const endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&with_genres=878&page=1`
+    const endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&with_genres=9648&page=1`
     this.fetchItems(endpoint)
   }
 
@@ -99,7 +99,7 @@ class HallThree extends Component {
             <Col sm={12}>
         <HallFiveColGrid
         //: ${this.state.totalResults}
-        header={`Fantasy Movies`}
+        header={`Mistery Movies`}
             loading={this.state.loading}
         //    vote_count={this.state.vote_count}
             >

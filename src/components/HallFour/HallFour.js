@@ -35,7 +35,7 @@ class HallFour extends Component {
     //
     //https://api.themoviedb.org/3/discover/movie?api_key=844dba0bfd8f3a4f3799f6130ef9e335&language=en-US&with_genres=28
     //`${API_URL}discover/movie?api_key=${API_KEY}&language=en-US&with_genres=16`
-    const endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&with_genres=36&page=1`
+    const endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&with_genres=53&page=1`
     this.fetchItems(endpoint)
   }
 
@@ -95,7 +95,7 @@ class HallFour extends Component {
             <Col sm={12}>
         <HallFourColGrid
         //: ${this.state.totalResults}
-        header={`Fantasy Movies`}
+        header={`Thrilller Movies`}
             loading={this.state.loading}
         //    vote_count={this.state.vote_count}
             >

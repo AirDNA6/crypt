@@ -36,7 +36,7 @@ class Hala extends Component {
     //https://api.themoviedb.org/3/discover/movie?api_key=844dba0bfd8f3a4f3799f6130ef9e335&language=en-US&with_genres=28
     //`${API_URL}discover/movie?api_key=${API_KEY}&language=en-US&with_genres=16`
                                                                               //family, comedy
-    const endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&with_genres=10751,35&page=1`
+    const endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&with_genres=35&page=1`
     this.fetchItems(endpoint)
   }
 
