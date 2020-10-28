@@ -27,7 +27,7 @@ const MyMapComponent = withScriptjs(
 class About extends Component {
   render() {
     return (
-      <div>
+      <div className="animation">
 
         {/* <Container> */}
 <MyMapComponent

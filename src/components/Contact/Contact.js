@@ -5,6 +5,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import { MDBNotification } from "mdbreact";
+import './Contact.css'
 
 class Contact extends Component {
   state = {
@@ -60,7 +61,7 @@ class Contact extends Component {
 
 
     return (
-      <div className="container mx-auto">
+      <div className="container mx-auto animation">
         <form className="mb-5 mt-5"  onSubmit={sendEmail}>
           <MDBRow md={4}>
           <MDBCol md="8" className="mx-auto">

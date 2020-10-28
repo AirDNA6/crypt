@@ -10,7 +10,7 @@ import {Link} from 'react-router-dom'
 class About extends Component {
   render() {
     return (
-      <div>
+      <div className="animation">
         <Container className="aboutBack mb-5 mt-5">
           <Row className="aboutBack">
             <Link to="hallone" className="mx-auto">

@@ -17,3 +17,17 @@
 .aboutFont{
   font-size: 18px;
 }
+
+.animation{
+  animation: animateGrid 0.5s;
+}
+
+
+@keyframes animateGrid {
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}

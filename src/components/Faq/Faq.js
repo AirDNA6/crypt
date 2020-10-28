@@ -38,7 +38,7 @@ export default function Faq() {
   };
 
   return (
-    <div className={classes.root} className="container mt-5 mb-5">
+    <div className={classes.root} className="container mt-5 mb-5 animation">
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={{
         backgroundColor: '#343A40'
       }}>
